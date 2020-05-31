@@ -16,6 +16,7 @@ public class LoginServlet extends HttpServlet {
     private LoginService loginService = new LoginServiceImpl();
     /**
      * 处理登陆的业务逻辑层
+     * 原计划是做游客和管理员的下载站的……后面改成图床
      * @param req
      * @param resp
      * @throws ServletException
