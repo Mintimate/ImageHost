@@ -5,8 +5,8 @@
 <!--        数据库基础设置-->
         <property name="driverClass">com.mysql.cj.jdbc.Driver</property>
         <property name="jdbcUrl">jdbc:mysql://127.0.0.1:3306/ImageControl?useUnicode=true&amp;characterEncoding=UTF-8</property>
-        <property name="user">ImageControl</property>
-        <property name="password">ImageControl</property>
+        <property name="user">root</property>
+        <property name="password">123456</property>
 
 <!--        如果连接不足，一致性申请连接数-->
         <property name="acquireIncrement">5</property>
