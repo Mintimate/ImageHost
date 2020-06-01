@@ -1,5 +1,5 @@
 # ImgShare
-![](https://pic.downk.cc/item/5ed45217c2a9a83be5547256.png)
+![](http://101.133.237.130:8080/image?method=view&id=44)
 # 项目概述
 这个其实就是我个人的期末小项目，不是毕业设计……也不是什么大工程……没有用Springboot，就是最基础的JSP和Servlet，大佬们就别喷我了:-)
 项目目的：部署在任意一台个人服务器，可以把服务器变成个人图床服务器。
