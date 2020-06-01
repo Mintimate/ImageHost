@@ -1,6 +1,6 @@
-package cn.mintimate.Service.impl;
+package cn.mintimate.service.impl;
 
-import cn.mintimate.Service.UploadService;
+import cn.mintimate.service.UploadService;
 import cn.mintimate.repository.Public_ImageRepository;
 import cn.mintimate.repository.impl.Public_ImageRepositoryImpl;
 

@@ -1,12 +1,10 @@
 package cn.mintimate.controller;
 
-import cn.mintimate.Service.DeleteImgService;
-import cn.mintimate.Service.FindImgService;
-import cn.mintimate.Service.impl.DeleteImgServiceImpl;
-import cn.mintimate.Service.impl.FindImgServiceImpl;
+import cn.mintimate.service.DeleteImgService;
+import cn.mintimate.service.FindImgService;
+import cn.mintimate.service.impl.DeleteImgServiceImpl;
+import cn.mintimate.service.impl.FindImgServiceImpl;
 import cn.mintimate.entity.Public_Image;
-import cn.mintimate.repository.Public_ImageRepository;
-import cn.mintimate.repository.impl.Public_ImageRepositoryImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -46,7 +44,7 @@ public class ImageServlet extends HttpServlet {
             case "find":
                 //判断是否为类别选择
                 String image_type = req.getParameter("type");
-                if (image_type == null) {
+                if (image_type == null || image_type.equals("null")) {
                     List<Public_Image> list = findImgService.FindImgService(page);
                     req.setAttribute("list", list);
                     req.setAttribute("pages", findImgService.getPages());

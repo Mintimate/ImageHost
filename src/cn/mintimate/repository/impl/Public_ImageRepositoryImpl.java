@@ -20,7 +20,6 @@ import java.util.List;
  */
 public class Public_ImageRepositoryImpl implements Public_ImageRepository {
     private QueryRunner queryRunner=new QueryRunner();
-    private Connection connection = JDBCTools.getConnection();
     private  List <Public_Image> public_images=null;
 
     @Override
@@ -89,13 +88,15 @@ public class Public_ImageRepositoryImpl implements Public_ImageRepository {
     @Override
     public void Downlaod(int id) {
         //对图片的下载量++操作
+        Connection con=JDBCTools.getConnection();
         String sql = "UPDATE Public_Image SET download_count=download_count+1 WHERE id=?";
         try {
-            queryRunner.update(connection, sql, id);
+            queryRunner.update(con, sql, id);
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
         finally {
+            JDBCTools.release(con,null,null);
         }
     }
 

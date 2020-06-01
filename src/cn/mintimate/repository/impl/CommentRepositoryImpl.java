@@ -13,10 +13,10 @@ import java.util.List;
 
 public class CommentRepositoryImpl implements CommentRepository {
     private QueryRunner queryRunner=new QueryRunner();
-    private Connection connection = JDBCTools.getConnection();
     private List<User_Comment> comment=null;
     @Override
     public List<User_Comment> Get_Comment() {
+        Connection connection = JDBCTools.getConnection();
         String sql = "select * from User_Comment";
 //        List <Public_Image> public_images=null;
         try {
@@ -61,12 +61,12 @@ public class CommentRepositoryImpl implements CommentRepository {
 
     @Override
     public int Del_Comment(int id) {
-        Connection connection = JDBCTools.getConnection();
+        Connection con = JDBCTools.getConnection();
         PreparedStatement stmt = null;
         String sql="delete from User_Comment where id=?";
-        connection = JDBCTools.getConnection();
+        con = JDBCTools.getConnection();
         try {
-            stmt = connection.prepareStatement(sql);
+            stmt = con.prepareStatement(sql);
             stmt.setInt(1, id);
             int count = stmt.executeUpdate();//影响的行数
             if(count>0){
@@ -80,7 +80,7 @@ public class CommentRepositoryImpl implements CommentRepository {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }finally {
-            JDBCTools.release(connection,stmt,null);
+            JDBCTools.release(con,stmt,null);
         }
         return 0;//失败
     }

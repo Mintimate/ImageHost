@@ -1,7 +1,7 @@
 <%@ page import="cn.mintimate.entity.Public_Image" %>
-<%@ page import="cn.mintimate.Service.FindImgService" %>
+<%@ page import="cn.mintimate.service.FindImgService" %>
 <%@ page import="java.util.List" %>
-<%@ page import="cn.mintimate.Service.impl.FindImgServiceImpl" %><%--
+<%@ page import="cn.mintimate.service.impl.FindImgServiceImpl" %><%--
   Created by IntelliJ IDEA.
   User: mintimate
   Date: 2020/5/11
@@ -17,37 +17,6 @@
     <link rel="stylesheet"  type="text/css" href="/resources/css/HideWebkit.css">
     <script type="text/javascript" src="/resources/js/jquery.min.js"></script>
     <script type="text/javascript" src="/resources/js/MyTool.js"></script>
-    <script type="text/javascript">
-        $(function(){
-            $("#next").click(function(){
-                var pages = parseInt($("#pages").html());
-                var page = parseInt($("#currentPage").html());
-                if(page == pages){
-                    return;
-                }
-                page++;
-                location.href = "/image?type=动漫&page="+page;
-            })
-
-            $("#previous").click(function () {
-                var page = parseInt($("#currentPage").html());
-                if(page == 1){
-                    return;
-                }
-                page--;
-                location.href = "/image?type=动漫&page="+page;
-            })
-
-            $("#first").click(function () {
-                location.href = "/image?type=动漫&page=1";
-            })
-
-            $("#last").click(function(){
-                var pages = parseInt($("#pages").html());
-                location.href = "/image?type=动漫&page="+pages;
-            })
-        })
-    </script>
 </head>
 <body>
 <style>
@@ -90,12 +59,15 @@
         </c:forEach>
         <tr>
             <td colspan="7" align="center">
-                <span class="layui-btn-disabled layui-btn-xs" >每页<span id="dataPrePage">${dataPrePage}</span>条数据</span>
-                <button id="first" class="layui-btn layui-btn-primary layui-btn-xs ">首页</button>
-                <button id="last" class="layui-btn layui-btn-primary layui-btn-xs">尾页</button>
+                <span style="background: linear-gradient(to right, #F97794, #623AA2);
+        -webkit-background-clip: text;
+        color: transparent;" class="layui-btn layui-btn-disabled layui-btn-xs"><span>每页<span
+                        id="dataPrePage">${dataPrePage}</span>条数据</span> </span>
+                <button ImageType="动漫" id="first" class="layui-btn layui-btn-primary layui-btn-xs ">首页</button>
+                <button ImageType="动漫" id="last" class="layui-btn layui-btn-primary layui-btn-xs">尾页</button>
                 <button class="layui-btn-disabled layui-btn-xs"><span id="currentPage">${currentPage }</span>/<span id="pages">${pages }</span></button>
-                <button id="previous" class="layui-btn layui-btn-primary layui-btn-xs">上一页</button>
-                <button id="next" class="layui-btn layui-btn-primary layui-btn-xs">下一页</button>
+                <button ImageType="动漫" id="previous" class="layui-btn layui-btn-primary layui-btn-xs">上一页</button>
+                <button ImageType="动漫" id="next" class="layui-btn layui-btn-primary layui-btn-xs">下一页</button>
                 <button class="layui-btn layui-btn-normal layui-btn-xs" href="#" onclick="do_flash()">刷新下载数</button>
             </td>
         </tr>

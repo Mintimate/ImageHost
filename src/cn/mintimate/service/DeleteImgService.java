@@ -1,4 +1,4 @@
-package cn.mintimate.Service;
+package cn.mintimate.service;
 
 public interface DeleteImgService {
     public int del(int id);

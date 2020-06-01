@@ -89,8 +89,8 @@
                     <a class="" href="javascript:;">友情链接</a>
                     <dl class="layui-nav-child">
                         <dd><a href="https://www.mintimate.cn" target="_blank">Mintimate博客</a></dd>
-                        <dd><a href="https://space.bilibili.com/355567627" target="_blank">Mintimate's Bilibili</a>
-                        </dd>
+                        <dd><a href="https://github.com/Mintimate/ImgShare" target="_blank">Github开源地址</a></dd>
+                        <dd><a href="https://space.bilibili.com/355567627" target="_blank">Mintimate's Bilibili</a></dd>
                         <dd><a href="https://72k.us/dir/26158157-38620952-62326d" target="_blank">城通网盘下载</a></dd>
                         <dd><a href="">此位招租</a></dd>
                     </dl>

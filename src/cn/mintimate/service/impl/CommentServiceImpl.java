@@ -1,6 +1,6 @@
-package cn.mintimate.Service.impl;
+package cn.mintimate.service.impl;
 
-import cn.mintimate.Service.CommentService;
+import cn.mintimate.service.CommentService;
 import cn.mintimate.entity.User_Comment;
 import cn.mintimate.repository.CommentRepository;
 import cn.mintimate.repository.impl.CommentRepositoryImpl;

@@ -1,7 +1,7 @@
 package cn.mintimate.controller;
 
-import cn.mintimate.Service.LoginService;
-import cn.mintimate.Service.impl.LoginServiceImpl;
+import cn.mintimate.service.LoginService;
+import cn.mintimate.service.impl.LoginServiceImpl;
 import cn.mintimate.entity.User_Admin;
 import cn.mintimate.entity.User_Guest;
 
@@ -9,7 +9,6 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {

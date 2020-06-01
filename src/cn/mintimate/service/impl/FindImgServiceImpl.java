@@ -1,6 +1,6 @@
-package cn.mintimate.Service.impl;
+package cn.mintimate.service.impl;
 
-import cn.mintimate.Service.FindImgService;
+import cn.mintimate.service.FindImgService;
 import cn.mintimate.entity.Public_Image;
 import cn.mintimate.repository.Public_ImageRepository;
 import cn.mintimate.repository.impl.Public_ImageRepositoryImpl;

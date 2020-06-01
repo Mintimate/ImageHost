@@ -1,22 +1,19 @@
 package cn.mintimate.controller;
 
-import cn.mintimate.Service.UploadService;
-import cn.mintimate.Service.impl.UploadServiceImpl;
-import cn.mintimate.entity.Image_Type;
+import cn.mintimate.service.UploadService;
+import cn.mintimate.service.impl.UploadServiceImpl;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileItemFactory;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;

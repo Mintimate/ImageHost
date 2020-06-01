@@ -1,6 +1,6 @@
-package cn.mintimate.Service.impl;
+package cn.mintimate.service.impl;
 
-import cn.mintimate.Service.LoginService;
+import cn.mintimate.service.LoginService;
 import cn.mintimate.repository.User_GuestRepository;
 import cn.mintimate.repository.User_AdminRepository;
 import cn.mintimate.repository.impl.User_AdminReposotoryImpl;

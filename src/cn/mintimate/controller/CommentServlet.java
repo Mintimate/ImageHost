@@ -1,10 +1,7 @@
 package cn.mintimate.controller;
 
-import cn.mintimate.Service.CommentService;
-import cn.mintimate.Service.FindImgService;
-import cn.mintimate.Service.impl.CommentServiceImpl;
-import cn.mintimate.Service.impl.FindImgServiceImpl;
-import cn.mintimate.entity.Public_Image;
+import cn.mintimate.service.CommentService;
+import cn.mintimate.service.impl.CommentServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,11 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 
 @WebServlet("/Data")
 public class CommentServlet extends HttpServlet {

@@ -1,6 +1,6 @@
-package cn.mintimate.Service.impl;
+package cn.mintimate.service.impl;
 
-import cn.mintimate.Service.RegisterService;
+import cn.mintimate.service.RegisterService;
 import cn.mintimate.repository.User_GuestRepository;
 import cn.mintimate.repository.impl.User_GuestRepositoryImpl;
 

@@ -34,3 +34,39 @@ function do_null() {
 function do_view() {
     alert("该链接为记录浏览记录的链接嗷")
 }
+
+//分页模块内
+$(function(){
+    $("#next").click(function(){
+        var pages = parseInt($("#pages").html());
+        var page = parseInt($("#currentPage").html());
+        var ImgType=$("#next").attr("ImageType");
+        if(page == pages){
+            return;
+        }
+        page++;
+        location.href = "/image?type="+ImgType+"&page="+page;
+    })
+
+    // 回到首页
+    $("#previous").click(function () {
+        var page = parseInt($("#currentPage").html());
+        var ImgType=$("#next").attr("ImageType");
+        if(page == 1){
+            return;
+        }
+        page--;
+        location.href = "/image?type="+ImgType+"&page="+page;
+    })
+
+    $("#first").click(function () {
+        var ImgType=$("#next").attr("ImageType");
+        location.href = "/image?type="+ImgType+"&page=1";
+    })
+
+    $("#last").click(function(){
+        var pages = parseInt($("#pages").html());
+        var ImgType=$("#next").attr("ImageType");
+        location.href = "/image?type="+ImgType+"&page="+pages;
+    })
+})

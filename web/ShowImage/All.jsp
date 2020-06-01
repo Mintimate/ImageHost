@@ -1,7 +1,7 @@
 <%@ page import="cn.mintimate.entity.Public_Image" %>
-<%@ page import="cn.mintimate.Service.FindImgService" %>
+<%@ page import="cn.mintimate.service.FindImgService" %>
 <%@ page import="java.util.List" %>
-<%@ page import="cn.mintimate.Service.impl.FindImgServiceImpl" %><%--
+<%@ page import="cn.mintimate.service.impl.FindImgServiceImpl" %><%--
   Created by IntelliJ IDEA.
   User: mintimate
   Date: 2020/5/11

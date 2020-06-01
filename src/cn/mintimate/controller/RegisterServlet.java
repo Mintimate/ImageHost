@@ -1,7 +1,7 @@
 package cn.mintimate.controller;
 
-import cn.mintimate.Service.RegisterService;
-import cn.mintimate.Service.impl.RegisterServiveImpl;
+import cn.mintimate.service.RegisterService;
+import cn.mintimate.service.impl.RegisterServiveImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
