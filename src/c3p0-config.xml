@@ -18,7 +18,7 @@
         <property name="initialPoolSize">20</property>
 
         <!--最大连接数-->
-        <property name="maxPoolSize">50</property>
+        <property name="maxPoolSize">80</property>
 
         <!--最小连接数-->
         <property name="minPoolSize">5</property>

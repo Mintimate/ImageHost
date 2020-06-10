@@ -42,7 +42,7 @@
                 <p>修复分页逻辑错误</p>
                 <p>增加"下载量刷新"</p>
                 <div class="action-wrapper">
-                    <a href="/login.jsp" class="cd-btn main-action">登陆/注册</a>
+                    <a href="/login.jsp" class="cd-btn main-action">登录/注册</a>
                     <a href="mailto:mintimate215@gmail.com" class="cd-btn">Mail To Me</a>
                 </div>
                 <p><span style="color: #f0ffff; ">项目总进度</span></p>

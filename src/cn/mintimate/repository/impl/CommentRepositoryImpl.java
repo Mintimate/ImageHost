@@ -64,7 +64,6 @@ public class CommentRepositoryImpl implements CommentRepository {
         Connection con = JDBCTools.getConnection();
         PreparedStatement stmt = null;
         String sql="delete from User_Comment where id=?";
-        con = JDBCTools.getConnection();
         try {
             stmt = con.prepareStatement(sql);
             stmt.setInt(1, id);
