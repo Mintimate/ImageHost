@@ -41,7 +41,7 @@ public class CommentServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String user_name = req.getParameter("username");
-        String detials = req.getParameter("details");
+        String detials = (String)req.getAttribute("details");
         if (user_name == null) {
             resp.sendRedirect("/Function/Comment.jsp?error=yes");
         }
